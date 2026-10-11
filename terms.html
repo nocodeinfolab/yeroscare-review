@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Privacy Policy · YerosCare</title>
+  <meta
+    name="description"
+    content="How YerosCare LTD collects, uses, shares, retains and deletes personal data under the Nigeria Data Protection Act 2023."
+  />
+  <link rel="stylesheet" href="token.css" />
+  <link rel="stylesheet" href="base.css" />
+  <style>
+    /* ---------------------------------------------------------------
+       Legal document pages (privacy.html / terms.html)
+       Built on token.css + base.css. No advertising SDKs, no trackers.
+       --------------------------------------------------------------- */
+
+    .container { padding-inline: var(--space-5); }
+    @media (min-width: 768px) {
+      .container { padding-inline: var(--space-7); }
+    }
+
+    /* Skip link ---------------------------------------------------- */
+    .skip-link {
+      position: absolute;
+      left: var(--space-4);
+      top: -4rem;
+      z-index: 20;
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-size: var(--step-small);
+      font-weight: 600;
+      transition: top var(--duration-fast) var(--ease-out);
+    }
+    .skip-link:focus {
+      top: calc(var(--safe-area-top) + var(--space-4));
+    }
+
+    /* Header ------------------------------------------------------- */
+    .doc-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.88);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--color-line);
+    }
+    .doc-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      min-height: 3.5rem;
+      padding-block: var(--space-3);
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+    .doc-nav { display: flex; gap: var(--space-1); }
+    .doc-nav a {
+      padding: 0.45rem 0.8rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: var(--step-small);
+      font-weight: 500;
+      color: var(--color-ink-soft);
+      text-decoration: none;
+      transition: background-color var(--duration-fast) var(--ease-out),
+        color var(--duration-fast) var(--ease-out);
+    }
+    .doc-nav a:hover {
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+    }
+    .doc-nav a[aria-current="page"] {
+      background: var(--color-primary-soft);
+      border-color: var(--color-primary-line);
+      color: var(--color-primary-dark);
+    }
+
+    /* Hero --------------------------------------------------------- */
+    .doc-main { padding-block: var(--space-7) var(--space-9); }
+    .doc-hero { max-width: 46rem; }
+    .doc-hero h1 {
+      margin-top: var(--space-3);
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--color-ink);
+    }
+    .doc-meta {
+      margin-top: var(--space-4);
+      font-size: var(--step-small);
+      color: var(--color-ink-soft);
+    }
+    .doc-meta a { color: var(--color-primary-dark); }
+    .doc-lead {
+      margin-top: var(--space-4);
+      max-width: 62ch;
+      font-size: var(--step-lead);
+      color: var(--color-ink-soft);
+    }
+
+    /* Layout ------------------------------------------------------- */
+    .doc-layout {
+      margin-top: var(--space-8);
+      display: grid;
+      gap: var(--space-7);
+    }
+    @media (min-width: 1000px) {
+      .doc-layout {
+        grid-template-columns: 15rem minmax(0, 1fr);
+        gap: var(--space-9);
+        align-items: start;
+      }
+      .toc {
+        position: sticky;
+        top: calc(3.5rem + var(--safe-area-top) + var(--space-5));
+      }
+    }
+
+    /* Table of contents -------------------------------------------- */
+    .toc-title {
+      font-family: var(--font-mono);
+      font-size: var(--step-eyebrow);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+    }
+    .toc-list {
+      margin-top: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      counter-reset: toc;
+    }
+    .toc-list li { counter-increment: toc; }
+    .toc-list a {
+      display: flex;
+      gap: var(--space-3);
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-sm);
+      font-size: var(--step-small);
+      line-height: 1.35;
+      color: var(--color-ink-soft);
+      text-decoration: none;
+    }
+    .toc-list a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--color-primary);
+      opacity: 0.7;
+      padding-top: 0.15em;
+    }
+    .toc-list a:hover {
+      background: var(--color-bg-soft);
+      color: var(--color-primary-dark);
+    }
+
+    /* Prose -------------------------------------------------------- */
+    .doc { max-width: 44rem; }
+    .doc-section + .doc-section {
+      margin-top: var(--space-7);
+      padding-top: var(--space-7);
+      border-top: 1px solid var(--color-line);
+    }
+    .doc-section h2 {
+      font-family: var(--font-display);
+      font-size: var(--step-h3);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--color-primary-dark);
+      scroll-margin-top: 6rem;
+    }
+    .doc-section h3 {
+      margin-top: var(--space-5);
+      font-family: var(--font-mono);
+      font-size: var(--step-eyebrow);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      scroll-margin-top: 6rem;
+    }
+    .doc-section p { margin-top: var(--space-4); }
+    .doc-section ul,
+    .doc-section ol { margin-top: var(--space-4); }
+
+    .doc-list {
+      padding-left: 1.1rem;
+      list-style: disc;
+    }
+    .doc-list li + li { margin-top: var(--space-2); }
+    .doc-list li::marker { color: var(--color-primary); }
+    .doc-list a { color: var(--color-primary-dark); }
+
+    /* Placeholders still needing a decision ------------------------ */
+    .ph {
+      padding: 0 0.3em;
+      background: var(--color-primary-soft);
+      border-bottom: 1px dashed var(--color-primary-line);
+      border-radius: 4px;
+      color: var(--color-primary-dark);
+      font-size: 0.95em;
+    }
+
+    /* Lawful-basis table ------------------------------------------- */
+    .table-wrap {
+      margin-top: var(--space-4);
+      overflow-x: auto;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      -webkit-overflow-scrolling: touch;
+    }
+    .doc-table {
+      width: 100%;
+      min-width: 32rem;
+      border-collapse: collapse;
+      font-size: var(--step-small);
+    }
+    .doc-table th,
+    .doc-table td {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      vertical-align: top;
+    }
+    .doc-table thead th {
+      background: var(--color-bg-soft);
+      border-bottom: 1px solid var(--color-line);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary-dark);
+    }
+    .doc-table tbody tr + tr td { border-top: 1px solid var(--color-line); }
+
+    /* Provider list ------------------------------------------------ */
+    .provider-list { display: grid; gap: var(--space-2); }
+    .provider-list li {
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-bg-soft);
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      font-size: var(--step-small);
+      color: var(--color-ink-soft);
+    }
+    .provider-list strong { color: var(--color-ink); }
+
+    /* Callout ------------------------------------------------------ */
+    .callout {
+      margin-top: var(--space-5);
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-primary-soft);
+      border: 1px solid var(--color-primary-line);
+      border-radius: var(--radius-md);
+      font-size: var(--step-small);
+      color: var(--color-primary-dark);
+    }
+    .callout strong { color: var(--color-primary-dark); }
+    .callout p + p { margin-top: var(--space-3); }
+
+    /* Footer ------------------------------------------------------- */
+    .doc-footer {
+      border-top: 1px solid var(--color-line);
+      background: var(--color-bg-soft);
+      padding-block: var(--space-6)
+        calc(var(--space-6) + var(--safe-area-bottom));
+    }
+    .doc-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3) var(--space-5);
+      align-items: center;
+      justify-content: space-between;
+      font-size: var(--step-small);
+      color: var(--color-ink-soft);
+    }
+    .doc-footer a { color: var(--color-primary-dark); }
+    .doc-footer__links { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+    /* Print -------------------------------------------------------- */
+    @media print {
+      .doc-header,
+      .toc,
+      .skip-link,
+      .doc-footer { display: none; }
+      .doc-layout { display: block; }
+      .doc { max-width: none; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="doc-header safe-area-top">
+    <div class="container doc-header__inner">
+      <a class="brand" href="/">YerosCare</a>
+      <nav class="doc-nav" aria-label="Legal documents">
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="doc-main">
+    <div class="container">
+      <div class="doc-hero">
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="doc-meta">
+          YerosCare LTD · Last updated: <span class="ph">[DATE]</span> ·
+          <a href="mailto:info@yeroscare.com">info@yeroscare.com</a>
+        </p>
+        <p class="doc-lead">
+          This policy explains what personal data YerosCare collects, why we
+          collect it, who we share it with, how long we keep it, and the rights
+          you have under the Nigeria Data Protection Act 2023.
+        </p>
+      </div>
+
+      <div class="doc-layout">
+        <nav class="toc" aria-labelledby="toc-heading">
+          <h2 class="toc-title" id="toc-heading">Contents</h2>
+          <ol class="toc-list">
+            <li><a href="#who-we-are">Who we are</a></li>
+            <li><a href="#our-role">Our role</a></li>
+            <li><a href="#who-can-use">Who can use the app</a></li>
+            <li><a href="#data-we-collect">Data we collect</a></li>
+            <li><a href="#how-we-use">How we use your data and our lawful bases</a></li>
+            <li><a href="#who-sees">Who sees your data</a></li>
+            <li><a href="#ai">AI-assisted specialty suggestions</a></li>
+            <li><a href="#where-stored">Where your data is stored</a></li>
+            <li><a href="#retention">Retention and deletion</a></li>
+            <li><a href="#your-rights">Your rights</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#permissions">Notifications and permissions</a></li>
+            <li><a href="#changes">Changes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <article class="doc">
+          <!-- 1 -->
+          <section class="doc-section" id="who-we-are">
+            <h2>1. Who we are</h2>
+            <p>
+              YerosCare LTD (“YerosCare”, “we”, “us”) operates the YerosCare
+              app, a platform for virtual medical consultations in Nigeria. We
+              are the data controller for personal data processed through the
+              app.
+            </p>
+            <p>
+              <span class="ph">[Data Protection Officer name and contact, if appointed.]</span>
+              <span class="ph">[NDPC registration status, if applicable.]</span>
+            </p>
+          </section>
+
+          <!-- 2 -->
+          <section class="doc-section" id="our-role">
+            <h2>2. Our role</h2>
+            <p>
+              YerosCare connects patients with independent doctors. We verify
+              each doctor’s licence with the Medical and Dental Council of
+              Nigeria (MDCN) before their profile is published. Doctors are not
+              our employees. Medical advice and treatment are provided by the
+              doctor you consult.
+            </p>
+          </section>
+
+          <!-- 3 -->
+          <section class="doc-section" id="who-can-use">
+            <h2>3. Who can use the app</h2>
+            <p>
+              YerosCare is for people aged 18 or over, in Nigeria. We do not
+              knowingly collect data from anyone under 18. If we learn we have,
+              we will delete it.
+            </p>
+          </section>
+
+          <!-- 4 -->
+          <section class="doc-section" id="data-we-collect">
+            <h2>4. Data we collect</h2>
+
+            <h3>Patients</h3>
+            <ul class="doc-list">
+              <li>
+                <strong>Account data:</strong> name, email, and sign-in details
+                from Google or Apple (including Apple’s private relay email if
+                you choose it).
+              </li>
+              <li>
+                <strong>Profile and health data:</strong> date of birth,
+                gender, blood group, allergies, ongoing conditions, phone and
+                WhatsApp numbers, address, emergency contact.
+              </li>
+              <li>
+                <strong>Consultation data:</strong> reason for visit and
+                symptoms, appointment details, doctor’s notes shared with you
+                (outcome, plan, follow-up), prescriptions.
+              </li>
+              <li>Messages exchanged with your doctor.</li>
+              <li>
+                <strong>Payment data:</strong> transaction status and
+                reference. Card details are handled by Paystack and are not
+                stored by us.
+              </li>
+            </ul>
+
+            <h3>Doctors</h3>
+            <ul class="doc-list">
+              <li>
+                Name, email, specialization, bio, experience, photo, phone
+                number, MDCN registration number and licence documents,
+                consultation fees, verification status, subscription status.
+              </li>
+            </ul>
+
+            <h3>All users</h3>
+            <ul class="doc-list">
+              <li>
+                <strong>Device and technical data:</strong> push notification
+                token, app version, IP address, and security logs.
+              </li>
+              <li>
+                <strong>Session data:</strong> an access token stored on your
+                device and a refresh token in a secure cookie.
+              </li>
+              <li>
+                <strong>Calls:</strong> voice and video calls are not recorded.
+                <span class="ph">[Call metadata, such as start time and duration — confirm whether it is stored.]</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- 5 -->
+          <section class="doc-section" id="how-we-use">
+            <h2>5. How we use your data and our lawful bases</h2>
+            <div class="table-wrap">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Purpose</th>
+                    <th scope="col">Lawful basis (NDPA 2023)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Create and secure your account</td>
+                    <td>Contract</td>
+                  </tr>
+                  <tr>
+                    <td>Match you with doctors and book consultations</td>
+                    <td>Contract</td>
+                  </tr>
+                  <tr>
+                    <td>Provide consultations, chat, calls, prescriptions</td>
+                    <td>Contract; consent for health data</td>
+                  </tr>
+                  <tr>
+                    <td>Process payments and refunds</td>
+                    <td>Contract; legal obligation</td>
+                  </tr>
+                  <tr>
+                    <td>Verify doctors’ licences</td>
+                    <td>Legitimate interest; legal obligation</td>
+                  </tr>
+                  <tr>
+                    <td>AI specialty suggestion (Section 7)</td>
+                    <td>Explicit consent</td>
+                  </tr>
+                  <tr>
+                    <td>Send appointment and message notifications</td>
+                    <td>Contract; legitimate interest</td>
+                  </tr>
+                  <tr>
+                    <td>Prevent fraud and keep the platform secure</td>
+                    <td>Legitimate interest</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Health data is sensitive personal data. We process it only with
+              your explicit consent or where the law allows, and you can
+              withdraw consent by deleting your account.
+            </p>
+          </section>
+
+          <!-- 6 -->
+          <section class="doc-section" id="who-sees">
+            <h2>6. Who sees your data</h2>
+            <p>
+              Your doctor sees the profile, health information and symptoms you
+              provide for your booking. Doctors’ private working notes are
+              visible only to them. Outcome, plan and follow-up notes are
+              visible to you.
+            </p>
+
+            <h3>Service providers that process data for us</h3>
+            <ul class="provider-list">
+              <li><strong>Paystack:</strong> patient payments.</li>
+              <li>
+                <strong>Google Play / Apple App Store:</strong> doctor
+                subscription billing.
+              </li>
+              <li><strong>Google and Apple:</strong> sign-in.</li>
+              <li>
+                <strong>LiveKit:</strong> real-time audio and video.
+                <span class="ph">[State whether LiveKit Cloud or self-hosted; if Cloud, add that media passes through its servers.]</span>
+              </li>
+              <li>
+                <strong>DigitalOcean:</strong> hosting and storage
+                <span class="ph">[region]</span>.
+              </li>
+              <li>
+                <strong>Anthropic:</strong> AI specialty suggestion (Section 7).
+              </li>
+              <li>
+                <span class="ph">[Push provider, e.g. Firebase Cloud Messaging / Apple Push Notification service.]</span>
+              </li>
+              <li>
+                <span class="ph">[Email provider that sends sign-in codes.]</span>
+              </li>
+              <li>Authorities, where the law requires it.</li>
+            </ul>
+
+            <p>
+              We do not sell your personal data. We do not use it for
+              advertising, we do not track you across other apps or websites,
+              and the app contains no advertising SDKs.
+            </p>
+          </section>
+
+          <!-- 7 -->
+          <section class="doc-section" id="ai">
+            <h2>7. AI-assisted specialty suggestions</h2>
+            <p>
+              If you use the symptom check, the symptoms you type are sent to
+              Claude, an AI model provided by Anthropic, to suggest which type
+              of specialist to see.
+            </p>
+            <ul class="doc-list">
+              <li>It is not a diagnosis and is not medical advice.</li>
+              <li>
+                We do not send your name, email, phone number or address.
+                <span class="ph">[Confirm whether age and gender are sent.]</span>
+                Please avoid typing names or contact details into the symptom
+                box.
+              </li>
+              <li>
+                The suggestion helps you choose a specialty. A doctor makes any
+                medical decision.
+              </li>
+              <li>We ask for your consent before your symptoms are sent.</li>
+              <li>
+                Anthropic’s current API data-retention and training terms are:
+                <span class="ph">[insert verified summary]</span>.
+              </li>
+            </ul>
+          </section>
+
+          <!-- 8 -->
+          <section class="doc-section" id="where-stored">
+            <h2>8. Where your data is stored</h2>
+            <p>
+              Your data is stored on servers operated by DigitalOcean in
+              <span class="ph">[REGION]</span>.
+            </p>
+            <p>
+              <span class="ph">[If outside Nigeria: your data is transferred outside Nigeria. We rely on [adequacy decision / contractual safeguards / consent] as the NDPA requires, and we use providers that apply equivalent protections.]</span>
+            </p>
+          </section>
+
+          <!-- 9 -->
+          <section class="doc-section" id="retention">
+            <h2>9. Retention and deletion</h2>
+            <p>
+              You can delete your account at any time inside the app
+              (<span class="ph">[Settings &gt; Delete account]</span>). When you
+              do, we permanently delete your account data, including medical
+              records and chat messages.
+              <span class="ph">[Deletion happens within X days; backups are purged within Y days.]</span>
+            </p>
+
+            <h3>Legal and accounting retention</h3>
+            <p>
+              We retain limited transaction records, without health details,
+              for <span class="ph">[period]</span> to meet legal and accounting
+              obligations.
+              <span class="ph">[Confirm the required period with Nigerian counsel.]</span>
+            </p>
+
+            <h3>Your doctor’s copy</h3>
+            <p>
+              Deleting your account removes your records from our platform.
+              <span class="ph">[State whether doctors keep their own clinical records outside the app.]</span>
+            </p>
+          </section>
+
+          <!-- 10 -->
+          <section class="doc-section" id="your-rights">
+            <h2>10. Your rights</h2>
+            <p>Under the Nigeria Data Protection Act 2023, you may:</p>
+            <ul class="doc-list">
+              <li>access your data and get a copy;</li>
+              <li>correct inaccurate data;</li>
+              <li>delete your data, including in-app account deletion;</li>
+              <li>withdraw consent;</li>
+              <li>object to or restrict certain processing;</li>
+              <li>receive your data in a portable format;</li>
+              <li>complain to the Nigeria Data Protection Commission.</li>
+            </ul>
+            <p>
+              To use these rights, email
+              <a href="mailto:info@yeroscare.com">info@yeroscare.com</a>. We
+              will respond within <span class="ph">[30 days]</span>.
+            </p>
+          </section>
+
+          <!-- 11 -->
+          <section class="doc-section" id="security">
+            <h2>11. Security</h2>
+            <p>
+              We use
+              <span class="ph">[encryption in transit (HTTPS/TLS), encryption at rest where available, access controls, authentication via one-time codes or Google/Apple sign-in, and secure session handling]</span>.
+              No system is perfectly secure. If a breach affects your data, we
+              will notify you and the NDPC as the law requires.
+            </p>
+          </section>
+
+          <!-- 12 -->
+          <section class="doc-section" id="permissions">
+            <h2>12. Notifications and permissions</h2>
+            <p>
+              The app may ask for: notifications (appointment and message
+              alerts), microphone and camera (consultation calls), and
+              photo/file access (profile photo, documents). You can change
+              these in your device settings.
+            </p>
+          </section>
+
+          <!-- 13 -->
+          <section class="doc-section" id="changes">
+            <h2>13. Changes</h2>
+            <p>
+              We will post updates here and tell you in the app for material
+              changes.
+            </p>
+          </section>
+
+          <!-- 14 -->
+          <section class="doc-section" id="contact">
+            <h2>14. Contact</h2>
+            <p>
+              YerosCare LTD ·
+              <a href="mailto:info@yeroscare.com">info@yeroscare.com</a>
+            </p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="doc-footer">
+    <div class="container doc-footer__inner">
+      <p>© <span class="ph">[YEAR]</span> YerosCare LTD. All rights reserved.</p>
+      <div class="doc-footer__links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:info@yeroscare.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
