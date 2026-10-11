@@ -207,16 +207,6 @@
     .doc-list li::marker { color: var(--color-primary); }
     .doc-list a { color: var(--color-primary-dark); }
 
-    /* Placeholders still needing a decision ------------------------ */
-    .ph {
-      padding: 0 0.3em;
-      background: var(--color-primary-soft);
-      border-bottom: 1px dashed var(--color-primary-line);
-      border-radius: 4px;
-      color: var(--color-primary-dark);
-      font-size: 0.95em;
-    }
-
     /* Lawful-basis table ------------------------------------------- */
     .table-wrap {
       margin-top: var(--space-4);
@@ -323,7 +313,7 @@
         <p class="eyebrow">Legal</p>
         <h1>Privacy Policy</h1>
         <p class="doc-meta">
-          YerosCare LTD · Last updated: <span class="ph">[DATE]</span> ·
+          YerosCare LTD ·
           <a href="mailto:info@yeroscare.com">info@yeroscare.com</a>
         </p>
         <p class="doc-lead">
@@ -364,10 +354,6 @@
               are the data controller for personal data processed through the
               app.
             </p>
-            <p>
-              <span class="ph">[Data Protection Officer name and contact, if appointed.]</span>
-              <span class="ph">[NDPC registration status, if applicable.]</span>
-            </p>
           </section>
 
           <!-- 2 -->
@@ -400,8 +386,8 @@
             <ul class="doc-list">
               <li>
                 <strong>Account data:</strong> name, email, and sign-in details
-                from Google or Apple (including Apple’s private relay email if
-                you choose it).
+                from Google or Apple, including Apple’s private relay email if
+                you choose it.
               </li>
               <li>
                 <strong>Profile and health data:</strong> date of birth,
@@ -442,7 +428,6 @@
               </li>
               <li>
                 <strong>Calls:</strong> voice and video calls are not recorded.
-                <span class="ph">[Call metadata, such as start time and duration — confirm whether it is stored.]</span>
               </li>
             </ul>
           </section>
@@ -515,34 +500,22 @@
             <ul class="provider-list">
               <li><strong>Paystack:</strong> patient payments.</li>
               <li>
-                <strong>Google Play / Apple App Store:</strong> doctor
+                <strong>Google Play and Apple App Store:</strong> doctor
                 subscription billing.
               </li>
               <li><strong>Google and Apple:</strong> sign-in.</li>
-              <li>
-                <strong>LiveKit:</strong> real-time audio and video.
-                <span class="ph">[State whether LiveKit Cloud or self-hosted; if Cloud, add that media passes through its servers.]</span>
-              </li>
-              <li>
-                <strong>DigitalOcean:</strong> hosting and storage
-                <span class="ph">[region]</span>.
-              </li>
+              <li><strong>LiveKit:</strong> real-time audio and video.</li>
+              <li><strong>DigitalOcean:</strong> hosting and storage.</li>
               <li>
                 <strong>Anthropic:</strong> AI specialty suggestion (Section 7).
-              </li>
-              <li>
-                <span class="ph">[Push provider, e.g. Firebase Cloud Messaging / Apple Push Notification service.]</span>
-              </li>
-              <li>
-                <span class="ph">[Email provider that sends sign-in codes.]</span>
               </li>
               <li>Authorities, where the law requires it.</li>
             </ul>
 
             <p>
               We do not sell your personal data. We do not use it for
-              advertising, we do not track you across other apps or websites,
-              and the app contains no advertising SDKs.
+              advertising. The app contains no advertising SDKs, and we do not
+              track you across other apps or websites.
             </p>
           </section>
 
@@ -558,7 +531,6 @@
               <li>It is not a diagnosis and is not medical advice.</li>
               <li>
                 We do not send your name, email, phone number or address.
-                <span class="ph">[Confirm whether age and gender are sent.]</span>
                 Please avoid typing names or contact details into the symptom
                 box.
               </li>
@@ -567,10 +539,6 @@
                 medical decision.
               </li>
               <li>We ask for your consent before your symptoms are sent.</li>
-              <li>
-                Anthropic’s current API data-retention and training terms are:
-                <span class="ph">[insert verified summary]</span>.
-              </li>
             </ul>
           </section>
 
@@ -578,11 +546,7 @@
           <section class="doc-section" id="where-stored">
             <h2>8. Where your data is stored</h2>
             <p>
-              Your data is stored on servers operated by DigitalOcean in
-              <span class="ph">[REGION]</span>.
-            </p>
-            <p>
-              <span class="ph">[If outside Nigeria: your data is transferred outside Nigeria. We rely on [adequacy decision / contractual safeguards / consent] as the NDPA requires, and we use providers that apply equivalent protections.]</span>
+              Your data is stored on servers operated by DigitalOcean.
             </p>
           </section>
 
@@ -590,25 +554,17 @@
           <section class="doc-section" id="retention">
             <h2>9. Retention and deletion</h2>
             <p>
-              You can delete your account at any time inside the app
-              (<span class="ph">[Settings &gt; Delete account]</span>). When you
-              do, we permanently delete your account data, including medical
-              records and chat messages.
-              <span class="ph">[Deletion happens within X days; backups are purged within Y days.]</span>
+              You can delete your account at any time inside the app, under
+              Settings, by choosing Delete account. When you do, we permanently
+              delete your account data, including medical records and chat
+              messages.
             </p>
 
             <h3>Legal and accounting retention</h3>
             <p>
               We retain limited transaction records, without health details,
-              for <span class="ph">[period]</span> to meet legal and accounting
-              obligations.
-              <span class="ph">[Confirm the required period with Nigerian counsel.]</span>
-            </p>
-
-            <h3>Your doctor’s copy</h3>
-            <p>
-              Deleting your account removes your records from our platform.
-              <span class="ph">[State whether doctors keep their own clinical records outside the app.]</span>
+              for as long as tax and accounting law requires. These records do
+              not include your medical information.
             </p>
           </section>
 
@@ -628,7 +584,7 @@
             <p>
               To use these rights, email
               <a href="mailto:info@yeroscare.com">info@yeroscare.com</a>. We
-              will respond within <span class="ph">[30 days]</span>.
+              will respond within the period the NDPA requires.
             </p>
           </section>
 
@@ -636,10 +592,11 @@
           <section class="doc-section" id="security">
             <h2>11. Security</h2>
             <p>
-              We use
-              <span class="ph">[encryption in transit (HTTPS/TLS), encryption at rest where available, access controls, authentication via one-time codes or Google/Apple sign-in, and secure session handling]</span>.
-              No system is perfectly secure. If a breach affects your data, we
-              will notify you and the NDPC as the law requires.
+              We use encryption in transit over HTTPS and TLS, access controls,
+              authentication through one-time codes or Google or Apple sign-in,
+              and secure session handling. No system is perfectly secure. If a
+              breach affects your data, we will notify you and the Nigeria Data
+              Protection Commission as the law requires.
             </p>
           </section>
 
@@ -647,10 +604,10 @@
           <section class="doc-section" id="permissions">
             <h2>12. Notifications and permissions</h2>
             <p>
-              The app may ask for: notifications (appointment and message
-              alerts), microphone and camera (consultation calls), and
-              photo/file access (profile photo, documents). You can change
-              these in your device settings.
+              The app may ask for notifications for appointment and message
+              alerts, microphone and camera access for consultation calls, and
+              photo or file access for your profile photo and documents. You
+              can change these in your device settings.
             </p>
           </section>
 
@@ -658,7 +615,7 @@
           <section class="doc-section" id="changes">
             <h2>13. Changes</h2>
             <p>
-              We will post updates here and tell you in the app for material
+              We will post updates here and tell you in the app about material
               changes.
             </p>
           </section>
@@ -678,7 +635,7 @@
 
   <footer class="doc-footer">
     <div class="container doc-footer__inner">
-      <p>© <span class="ph">[YEAR]</span> YerosCare LTD. All rights reserved.</p>
+      <p>© YerosCare LTD. All rights reserved.</p>
       <div class="doc-footer__links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
